@@ -69,10 +69,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "3866d67f93523161b643187af65f5ac08bc991a5bcdaf41a2d587fe4ccb49993"
+      sha256: "9d6445da1caf8412070670c03c39ad5b12a78cc8c2361417b220905a2bcbdd2f"
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.0"
+    version: "5.3.1"
   fake_async:
     dependency: transitive
     description:
@@ -108,10 +108,10 @@ packages:
     dependency: transitive
     description:
       name: http
-      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.6"
+    version: "1.1.0"
   http_parser:
     dependency: transitive
     description:
@@ -121,7 +121,7 @@ packages:
     source: hosted
     version: "4.0.2"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
@@ -204,10 +204,10 @@ packages:
     dependency: "direct main"
     description:
       name: podcast_search
-      sha256: "0fa6a1d607842f840285d27959378c11fe84b7a4a88f543a72caf938b220a52a"
+      sha256: f9d4990683d05ef3f0a219d92b89f682e71980f0a422aab128d001cc815c00b3
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.1"
+    version: "0.6.2"
   pointycastle:
     dependency: transitive
     description:
@@ -228,23 +228,31 @@ packages:
     dependency: transitive
     description:
       name: rss_dart
-      sha256: f7f7c3d05983131c45eae29c42d71ff9c45634221e0d88c950e4835a26cddb4f
+      sha256: "2ec534aa94524c46dd0c3133e6822dc248aa874b4d26f7f10a8c9a61773718c6"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.4"
   skeletonizer:
     dependency: "direct main"
     description:
       name: skeletonizer
-      sha256: a201788634f9b0d3372767c3c03f36d85940e08a4498aecd7644136c1523d3f3
+      sha256: e4129ce8fc9559bbfa35d55f4b213cf19291409316cec31bb348d6b04b239441
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.0"
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
+  solar_icons:
+    dependency: "direct main"
+    description:
+      name: solar_icons
+      sha256: "2865a62fb0a39a7c2403205bfe05453bd3f2fedbaa8e5c3d436cf2a080afe259"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   source_span:
     dependency: transitive
     description:

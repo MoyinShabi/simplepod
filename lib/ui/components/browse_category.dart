@@ -121,6 +121,7 @@ class _BrowseCategoryState extends State<BrowseCategory> {
               );
             }
             return Skeletonizer(
+              // ignorePointers: false,
               enabled: true,
               child: SizedBox(
                 height: 230,
