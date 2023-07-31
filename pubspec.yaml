@@ -9,7 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  parsed_readmore: ^0.0.6
   podcast_search: ^0.6.1
+  rich_readmore: ^1.0.5
   skeletonizer: ^0.3.0
 
 
