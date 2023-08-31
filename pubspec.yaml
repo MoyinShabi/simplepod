@@ -7,14 +7,17 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  cached_network_image: ^3.2.3
   flutter:
     sdk: flutter
+  html: ^0.15.4
   intl: ^0.18.1
   just_audio: ^0.9.34
+  just_audio_background: ^0.0.1-beta.10
   parsed_readmore: ^0.0.6
-  podcast_search: ^0.6.1
+  podcast_search: ^0.6.3
   rich_readmore: ^1.0.5
-  skeletonizer: ^0.3.0
+  skeletonizer: ^0.7.0
   solar_icons: ^0.0.5
 
 
@@ -33,3 +36,5 @@ flutter:
           # weight: 500
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
+  assets:
+  - assets/images/placeholder.png

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:podcast_search/podcast_search.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -53,7 +54,7 @@ class _BrowseCategoryState extends State<BrowseCategory> {
           builder:
               (BuildContext context, AsyncSnapshot<SearchResult> snapshot) {
             if (snapshot.hasData) {
-              final items = snapshot.data?.items;
+              final List<Item>? items = snapshot.data?.items;
               return SizedBox(
                 height: 230,
                 child: ListView.separated(
@@ -66,19 +67,32 @@ class _BrowseCategoryState extends State<BrowseCategory> {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: GestureDetector(
-                            onTap: () {
-                              if (item != null) {
-                                Navigator.of(context).push(MaterialPageRoute(
+                        GestureDetector(
+                          onTap: () {
+                            if (item != null) {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
                                   builder: (context) => PodcastDetailsScreen(
                                       selectedPodcast: item),
-                                ));
-                              }
-                            },
-                            child: Image.network(
-                              item?.artworkUrl600 ?? '',
+                                ),
+                              );
+                            }
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: CachedNetworkImage(
+                              placeholder: (context, value) => Skeletonizer(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    'assets/images/placeholder.png',
+                                    fit: BoxFit.cover,
+                                    height: 150,
+                                    width: 150,
+                                  ),
+                                ),
+                              ),
+                              imageUrl: item?.artworkUrl600 ?? '',
                               fit: BoxFit.cover,
                               height: 150,
                               width: 150,
@@ -122,7 +136,7 @@ class _BrowseCategoryState extends State<BrowseCategory> {
             }
             return Skeletonizer(
               // ignorePointers: false,
-              enabled: true,
+              // enabled: true,
               child: SizedBox(
                 height: 230,
                 child: ListView.separated(
@@ -136,9 +150,9 @@ class _BrowseCategoryState extends State<BrowseCategory> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            'https://via.placeholder.com/600x600',
-                            fit: BoxFit.fill,
+                          child: Image.asset(
+                            'assets/images/placeholder.png',
+                            fit: BoxFit.cover,
                             height: 150,
                             width: 150,
                           ),

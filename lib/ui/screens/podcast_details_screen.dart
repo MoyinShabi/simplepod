@@ -23,14 +23,14 @@ class PodcastDetailsScreen extends StatelessWidget {
             .getPodcastDetails(feedUrl: selectedPodcast.feedUrl),
         builder: (BuildContext context, AsyncSnapshot<Podcast> snapshot) {
           if (snapshot.hasData) {
-            final podcast = snapshot.data;
-            if (podcast == null) {
+            final Podcast? podcastDetails = snapshot.data;
+            if (podcastDetails == null) {
               return const Center(
                 child: Text('Sorry, podcast details not available...'),
               );
             }
             return PodcastDetailsBody(
-                podcast: podcast, selectedPodcast: selectedPodcast);
+                podcast: podcastDetails, selectedPodcast: selectedPodcast);
           }
           if (snapshot.hasError) {
             return const Center(
